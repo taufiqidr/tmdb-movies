@@ -13,13 +13,14 @@ const Cast = ({ name, character, profile_path }) => {
             loader={img}
             width={240}
             height={240}
+            unoptimized={true}
             className="object-cover"
           ></Image>
         </div>
       )}
       <div>
-        <h3 className="mb-2 font-semibold">{name}</h3>
-        <h4 className="mb-2 text-sm">{character}</h4>
+        <p className="mb-2 font-semibold">{name}</p>
+        <p className="mb-2 text-sm">{character}</p>
       </div>
     </div>
   );

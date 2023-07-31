@@ -28,17 +28,19 @@ const MoviesList = ({ title, endpoint }) => {
       <h1 className="mb-4 text-2xl font-semibold">{title}</h1>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {movies
-          ? movies.map((movie, index) => (
-              <MovieCard
-                key={index}
-                id={movie.id}
-                title={movie.title}
-                release_date={movie.release_date}
-                poster_path={movie.poster_path}
-              />
-            ))
-          : null}
+        {movies && movies.length > 0 ? ( // Check if movies is an array and has elements
+          movies.map((movie, index) => (
+            <MovieCard
+              key={index}
+              id={movie.id}
+              title={movie.title}
+              release_date={movie.release_date}
+              poster_path={movie.poster_path}
+            />
+          ))
+        ) : (
+          <div>No movies found.</div> // Display a message if movies is not an array or is empty
+        )}
       </div>
     </div>
   );

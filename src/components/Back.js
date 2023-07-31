@@ -6,8 +6,9 @@ const Back = () => {
     <button
       className="w-20 cursor-pointer rounded-md bg-blue-500 px-3 py-1 text-white "
       onClick={() => router.back()}
+      role="button"
     >
-      <span>Back</span>
+      Back
     </button>
   );
 };

@@ -25,7 +25,7 @@ const TopBar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between p-4" id="top-bar">
+    <div className="flex items-center justify-between p-4" role="navigation">
       <div className="ml-10 flex items-center">
         <input
           type="text"
@@ -51,6 +51,7 @@ const TopBar = () => {
           className="rounded-l-md border px-2 py-1 bg-black text-white"
           value={selectedValue}
           onChange={handleSelectChange}
+          role="combobox"
         >
           <option value="/movies250">Top 250 Movies</option>
           <option value="/tv250">Top 250 TV Shows</option>

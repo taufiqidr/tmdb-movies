@@ -14,6 +14,7 @@ const TvCard = ({ id, name, first_air_date, poster_path }) => {
             loader={img}
             width={240}
             height={240}
+            unoptimized={true}
             className="mb-4 w-full rounded-md object-cover"
           ></Image>
         )}

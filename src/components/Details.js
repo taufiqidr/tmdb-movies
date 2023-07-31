@@ -102,6 +102,7 @@ const Details = () => {
             loader={img}
             width={240}
             height={480}
+            unoptimized={true}
             className="rounded-md  object-cover"
           ></Image>
           <div className="ml-4 flex flex-col justify-between ">

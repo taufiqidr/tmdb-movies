@@ -14,6 +14,7 @@ const MovieCard = ({ id, title, release_date, poster_path }) => {
             loader={img}
             width={240}
             height={240}
+            unoptimized={true}
             className="mb-4 w-full rounded-md object-cover"
           ></Image>
         )}

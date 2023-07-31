@@ -60,8 +60,6 @@ const TvDetails = () => {
   }
 
   if (tvDetails && credits) {
-    console.log(tvDetails);
-
     const creatorNames = tvDetails.created_by.map((creator) => creator.name);
     const creator = creatorNames.join(", ");
 
@@ -96,6 +94,7 @@ const TvDetails = () => {
             loader={img}
             width={240}
             height={480}
+            unoptimized={true}
             className="rounded-md  object-cover"
           ></Image>
           <div className="ml-4 flex flex-col justify-between ">
