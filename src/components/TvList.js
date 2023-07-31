@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 import TvCard from "../components/TvCard";
+import Loading from "./Loading";
 
 const TvsList = ({ title, endpoint }) => {
   const fetchTvs = async () => {
@@ -12,7 +13,7 @@ const TvsList = ({ title, endpoint }) => {
   const { data: tvs, isLoading, isError, error } = useQuery("tvs", fetchTvs);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {

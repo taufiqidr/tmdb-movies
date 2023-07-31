@@ -78,7 +78,7 @@ describe("TvDetails Component", () => {
 
     render(<TvDetails />);
 
-    const loadingElement = screen.getByText("Loading...");
+    const loadingElement = screen.getByTestId("loading-spinner");
     expect(loadingElement).toBeInTheDocument();
   });
 

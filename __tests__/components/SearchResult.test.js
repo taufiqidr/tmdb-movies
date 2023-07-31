@@ -48,7 +48,7 @@ describe("SearchResult Component", () => {
 
     render(<SearchResult title="Search Results" keyword="Action" />);
 
-    const loadingElement = screen.getByText("Loading...");
+    const loadingElement = screen.getByTestId("loading-spinner");
     expect(loadingElement).toBeInTheDocument();
   });
 

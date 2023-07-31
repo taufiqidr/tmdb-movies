@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 import axios from "axios";
 import Cast from "./Cast";
+import Loading from "./Loading";
 
 const Details = () => {
   const router = useRouter();
@@ -49,7 +50,7 @@ const Details = () => {
   });
 
   if (isLoadingMovie || isLoadingCredits) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isErrorMovie || isErrorCredits) {

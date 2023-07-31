@@ -48,7 +48,7 @@ describe("TvsList Component", () => {
 
     render(<TvsList title="TV Shows" endpoint="/tv/popular" />);
 
-    const loadingElement = screen.getByText("Loading...");
+    const loadingElement = screen.getByTestId("loading-spinner");
     expect(loadingElement).toBeInTheDocument();
   });
 

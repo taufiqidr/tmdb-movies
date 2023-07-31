@@ -14,7 +14,7 @@ describe("MoviesList Component", () => {
 
     render(<MoviesList title="Popular Movies" endpoint="/popular" />);
 
-    const loadingElement = screen.getByText("Loading...");
+    const loadingElement = screen.getByTestId("loading-spinner");
     expect(loadingElement).toBeInTheDocument();
   });
 

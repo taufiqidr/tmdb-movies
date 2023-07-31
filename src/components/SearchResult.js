@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 import MovieCard from "../components/MovieCard";
+import Loading from "./Loading";
 
 const MoviesList = ({ title, keyword }) => {
   const fetchMovies = async () => {
@@ -19,7 +20,7 @@ const MoviesList = ({ title, keyword }) => {
   } = useQuery("movies", fetchMovies);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (isError) {
